@@ -3,6 +3,7 @@ import '../fonts/fonts.css'
 import addIcon from '../assets/icon/151-1511569_cart-notifications-free-shopping-cart-favicon-hd-png-removebg-preview.png'
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import { FaShoppingCart } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 
 
@@ -31,6 +32,14 @@ const Navbar = () => {
         <li><Link to="/menu">OUR MENU</Link></li>
         <li><Link to="/order/salad">ORDER FOOD</Link></li>
         <li><Link to="/secret">SECRET</Link></li>
+        <li>
+            <Link to='/'>
+                <button className="btn">
+                <FaShoppingCart/>
+                    <div className="badge badge-secondary">+0</div>
+                </button>
+            </Link>
+        </li>
         <li><img className='w-[62px]' src={addIcon} alt="" /></li>
 
         {
