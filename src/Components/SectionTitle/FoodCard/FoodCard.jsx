@@ -18,7 +18,7 @@ const FoodCard = ({item}) => {
                 headers: {
                     'content-type' : 'application/json',
                 },
-                body: JSON.stringify()
+                body: JSON.stringify(cartItem) // fix this error
             })
             .then(res => res.json())
             .then(data =>{
